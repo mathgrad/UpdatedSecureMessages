@@ -1,0 +1,24 @@
+package securemessages.encryption.main;
+
+import java.util.HashMap;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out
+				.println("This is to test the textMap to ensure that there is a ton of stuff in the textMap");
+		HashMap<Character, Integer> test = Constants.textMap;
+		for (Character character : test.keySet()) {
+			System.out.println(character + " the respective value: "
+					+ test.get(character));
+		}
+
+		for (Integer integer : test.values()) {
+			System.out.println(integer + "the respective key: "
+					+ Constants.integerMap.get(integer));
+		}
+		System.out.println(test.size());
+	}
+}

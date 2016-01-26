@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+package securemessages.encryption.main;
+
+import java.util.HashMap;
+
+/**
+ * The purpose of this class is to override the aski table and replace it with
+ * one that will be easier to handle
+ * 
+ * @author Joshua
+ * 
+ */
+public class TextToNumbers {
+
+	/**
+	 * This is a hashmap of characters to integers this comment is to help
+	 * remind future attempts that it should be characters! not strings!
+	 */
+	public HashMap<Character, Integer> textMap;
+
+	/**
+	 * Generates a new TextToNumbers object
+	 */
+	public TextToNumbers() {
+		textMap = new HashMap<Character, Integer>();
+		createTextMap();
+	}
+
+	/**
+	 * Handles the creation of the textMap
+	 */
+	private void createTextMap() {
+
+	}
+
+	/**
+	 * To be used for much of the encryption process
+	 * 
+	 * @return size of the textMap
+	 * 
+	 */
+	public int getTextMapSize() {
+		return textMap.size();
+	}
+}

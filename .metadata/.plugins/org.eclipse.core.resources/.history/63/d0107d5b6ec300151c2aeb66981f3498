@@ -1,0 +1,16 @@
+package securemessages.encryption.main;
+
+import java.util.HashMap;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap<Character, Integer> test = Constants.textMap;
+		for (Character character : test.keySet()) {
+			System.out.print(character + " the respective key: "
+					+ test.get(character));
+		}
+	}
+
+}
