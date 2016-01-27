@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package securemessages.encryption.rsa;
+import securemessages.encryption.main.*;
+
+/**
+ * @author Joshua
+ *
+ */
+public class RSAgenerator extends Constants{
+
+}

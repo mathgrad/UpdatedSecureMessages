@@ -5,6 +5,7 @@ package securemessages.encryption.main;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 
 /**
  * The purpose of this class is to override the aski table and replace it with
@@ -14,7 +15,7 @@ import java.util.HashMap;
  * @author Joshua
  * 
  */
-public class Constants {
+public abstract class Constants {
 
 	/**
 	 * This is a hashmap of characters to integers.<br>
@@ -1113,6 +1114,16 @@ public class Constants {
 		primeListForBlockLengthThree.add(7919);
 	}
 
+	public static ArrayList<Integer> generalPrimeList = new ArrayList<Integer>();
+	static {
+		for (int i = 0; i < primeListForBlockLengthTwo.size(); i++) {
+			generalPrimeList.add(primeListForBlockLengthTwo.get(i));
+		}
+		for (int j = 0; j < primeListForBlockLengthThree.size(); j++) {
+			generalPrimeList.add(primeListForBlockLengthThree.get(j));
+		}
+	}
+	
 	private static Character getKeyFromValue(HashMap<Character, Integer> hm,
 			Integer value) {
 		for (Character object : hm.keySet()) {
