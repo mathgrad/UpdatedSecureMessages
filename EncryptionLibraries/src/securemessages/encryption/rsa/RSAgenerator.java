@@ -43,12 +43,25 @@ public class RSAgenerator extends Constants {
 	}
 
 	private void generateKeyForBlockTwo() {
+		p = generator.nextInt(primeListForBlockLengthTwo.size());
+		q = generator.nextInt(primeListForBlockLengthTwo.size());
+		p = primeListForBlockLengthTwo.get(p);
+		q = primeListForBlockLengthTwo.get(q);
+		n = p * q;
+		pin = (p - 1) * (q - 1);
+		e = 0;
 
+		createEncryptor();
+		createDecryptor();
+
+		encryptor = new BigInteger(String.valueOf(e));
+		decryptor = new BigInteger(String.valueOf(d));
+		modulous = new BigInteger(String.valueOf(n));
 	}
 
 	private void generateKeyForBlockThree() {
-		p = generator.nextInt(generalPrimeList.size());
-		q = generator.nextInt(generalPrimeList.size());
+		p = generator.nextInt(primeListForBlockLengthThree.size());
+		q = generator.nextInt(primeListForBlockLengthThree.size());
 		p = primeListForBlockLengthThree.get(p);
 		q = primeListForBlockLengthThree.get(q);
 		n = p * q;
