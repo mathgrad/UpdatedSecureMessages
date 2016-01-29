@@ -9,7 +9,7 @@ import securemessages.encryption.main.*;
 
 /**
  * The purpose of this class is to generate the important public and private key
- * to be used with application to application communication
+ * of RSA to be used with application to application communication
  * 
  * @author Joshua
  * 
