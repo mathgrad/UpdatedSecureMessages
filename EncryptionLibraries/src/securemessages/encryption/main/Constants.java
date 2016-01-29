@@ -1124,6 +1124,8 @@ public abstract class Constants {
 		}
 	}
 	
+	public static Random generator = new Random();
+	
 	private static Character getKeyFromValue(HashMap<Character, Integer> hm,
 			Integer value) {
 		for (Character object : hm.keySet()) {
